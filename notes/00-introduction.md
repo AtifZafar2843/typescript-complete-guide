@@ -1,98 +1,99 @@
-📄 notes/00-introduction.md
 # Introduction to TypeScript
 
 ## TypeScript kya hai?
-TypeScript ek **programming language** hai jo **JavaScript ke upar bana hai**.
+TypeScript ek **programming language** hai jo **JavaScript ke upar build** ki gayi hai.
 
-Simple words me:
-👉 TypeScript = JavaScript + Types
+Simple shabdon me:
 
-JavaScript me hum types define nahi karte:
+> **TypeScript = JavaScript + Types**
+
+JavaScript me variables ka type define nahi hota,  
+jabki TypeScript me hum pehle batate hain ki variable kis type ka hoga.
+
+---
+
+## JavaScript vs TypeScript (Basic Example)
+
+### JavaScript
 ```js
 let age = 20;
-age = "twenty"; // error nahi aata JS me
+age = "twenty"; // JavaScript me error nahi aata
+```
 
-
-TypeScript me hum pehle hi bata dete hain:
-
+### TypeScript
+```ts
 let age: number = 20;
-age = "twenty"; // ❌ error (compile time)
+age = "twenty"; // Compile time error
+```
 
-TypeScript kyun use karein?
+👉 TypeScript hume code likhte waqt hi error bata deta hai.
+
+---
+
+### TypeScript kyun use karein?
 1. Compile Time Error Detection
-
-TypeScript hume code likhte time hi error bata deta hai, run karne se pehle.
-
-👉 Isse bugs kam hote hain.
+TypeScript me errors run hone se pehle mil jaate hain,
+jis se bugs kaafi kam ho jaate hain.
 
 2. Better Code Quality
-
-Types hone ki wajah se:
-
-Code readable hota hai
-
+Code zyada readable hota hai
 Samajhna easy hota hai
-
-Team ke saath kaam karna easy hota hai
+Team ke saath kaam karna easy ho jaata hai
 
 3. Large Projects ke liye Best
+Small scripts ke liye JavaScript theek hai,
+lekin React, Node, Backend aur large applications ke liye
+TypeScript zyada reliable hota hai.
 
-JavaScript small projects ke liye theek hai,
-lekin React / Node / Backend / Enterprise apps me TypeScript zyada reliable hai.
-
-4. JavaScript ka hi Super Set
-
-TypeScript koi nayi duniya nahi hai.
+4. JavaScript ka Super Set
+TypeScript koi alag language nahi hai jo JavaScript ko replace karti ho.
 
 ✔ Jo JavaScript me valid hai
 ✔ Wo TypeScript me bhi valid hai
 
-Matlab:
+### Example:
 
-console.log("Hello");
+```js
+console.log("Hello World");
+```
+Ye code TypeScript me bhi bilkul sahi chalega.
 
+### TypeScript kaise kaam karta hai?
+Browser directly TypeScript nahi samajhta.
 
-Ye TypeScript me bhi chalega 👍
+### Flow kuch is tarah hota hai:
 
-TypeScript kaise kaam karta hai?
+```txt
+TypeScript (.ts)
+        ↓ compile
+JavaScript (.js)
+        ↓
+Browser / Node.js
+TypeScript file pehle JavaScript me convert hoti hai,
+phir wahi JavaScript run hoti hai.
+```
 
-TypeScript browser samajh nahi sakta.
+---
 
-Isliye flow hota hai:
-
-TypeScript (.ts) → Compile → JavaScript (.js) → Browser
-
-
-TypeScript compile hokar JavaScript ban jaata hai.
-
-TypeScript kaha use hota hai?
-
-React (mostly with TS)
-
+### TypeScript kaha use hota hai?
+React (mostly TypeScript ke saath)
 Angular (pure TypeScript)
+Node.js backend
+Large scale web applications
+Enterprise level software
 
-Node.js Backend
+---
 
-Large Scale Web Apps
-
-Enterprise Applications
-
-Industry Reality 💡
-
+### Industry Reality
 Aaj ke time me:
+React + TypeScript = Industry Standard
+Companies plain JavaScript se zyada TypeScript prefer karti hain
+Isliye TypeScript seekhna ek strong career decision hai.
 
-React + TypeScript = Standard
+---
 
-Companies JavaScript se zyada TypeScript prefer karti hain
-
-Isliye TypeScript seekhna optional nahi, almost mandatory ho chuka hai.
-
-Summary
-
+### Summary
 TypeScript = JavaScript + Types
-
-Errors pehle mil jaate hain
-
-Code safe & maintainable hota hai
-
-Industry standard skill hai
+Compile time errors milte hain
+Code zyada safe aur maintainable hota hai
+Modern web development ke liye essential skill hai

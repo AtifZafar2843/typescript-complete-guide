@@ -1,65 +1,83 @@
+
 # TypeScript Environment Setup
 
+## Is section me hum kya seekhenge?
 Is section me hum step-by-step dekhenge:
-- TypeScript ka environment kaise setup karein
-- Project ka structure kaise banayein
-- Code ko compile kaise karein
+TypeScript ka environment kaise setup karein  
+Project ka basic structure kaise banayein  
+TypeScript code ko compile kaise karein  
 
----
+## Prerequisites (pehle kya hona chahiye?)
 
-## 1. Prerequisites (pehle kya hona chahiye?)
+### Node.js Installed hona chahiye
 
-### ✔ Node.js Installed hona chahiye
-Check karne ke liye:
+Check karne ke liye terminal me run karo:
+
 ```bash
 node -v
 npm -v
-Agar version aa raha hai → sab theek 👍
-Nahi aa raha → Node.js install karo.
+```
 
-2. TypeScript Install karna
-Global Install (recommended for beginners)
-bash
-Copy code
+Agar version aa raha hai → sab theek
+Agar version nahi aa raha → pehle Node.js install karo
+
+
+## TypeScript Install karna
+
+### Global Install (beginners ke liye recommended)
+
+```bash
 npm install -g typescript
-Check installation:
+```
 
-bash
-Copy code
+Installation check karne ke liye:
+
+```bash
 tsc -v
-Agar version aa gaya → TypeScript install ho gaya 🎉
+```
 
-3. Project Folder Create karo
-bash
-Copy code
+Agar version aa gaya → TypeScript successfully install ho gaya
+
+## Project Folder Create karna
+
+Terminal me command run karo:
+
+```bash
 mkdir typescript-complete-guide
 cd typescript-complete-guide
-4. Node Project Initialize karo
-bash
-Copy code
+```
+
+## Node Project Initialize karna
+
+```bash
 npm init -y
-Isse package.json ban jaayega.
+```
 
-5. TypeScript Config File (tsconfig.json)
-bash
-Copy code
+Is command se ek `package.json` file create hoti hai
+Jo project ki basic information rakhti hai
+
+## TypeScript Config File (tsconfig.json)
+
+TypeScript config file generate karne ke liye:
+
+```bash
 tsc --init
-Ye command ek important file banati hai:
+```
 
-txt
-Copy code
+Isse ek file create hoti hai:
+
+```txt
 tsconfig.json
-👉 Ye file batati hai:
+```
 
+Ye file TypeScript compiler ko batati hai:
 Kaun si files compile hongi
+Output kaha generate hoga
+Kaunsa JavaScript version use hoga
 
-Output kaha jayega
+## Basic tsconfig.json (Beginner Friendly)
 
-Kaunsa JS version use hoga
-
-6. Important tsconfig Options (Beginner Friendly)
-json
-Copy code
+```json
 {
   "compilerOptions": {
     "target": "ES6",
@@ -69,77 +87,77 @@ Copy code
     "strict": true
   }
 }
-Samjho isko 👇
-target: JavaScript ka version
+```
 
-module: import/export ka system
+### Important options ka simple meaning
 
-rootDir: TypeScript files kaha hongi
+target → JavaScript ka version
+module → import/export system
+rootDir → TypeScript files ka folder
+outDir → Compiled JavaScript ka folder
+strict → strict type checking (recommended)
 
-outDir: Compiled JavaScript kaha jayegi
+## Project Folder Structure
 
-strict: strict type checking (recommended)
+```txt
+typescript-complete-guide/
+│
+├── src/
+├── dist/
+├── notes/
+├── tsconfig.json
+├── package.json
+└── README.md
+```
 
-7. Folder Structure
-txt
-Copy code
-src/     → TypeScript files (.ts)
-dist/    → Compiled JavaScript files (.js)
-notes/   → Learning notes (Markdown)
-8. First TypeScript File
-src/index.ts
+src → TypeScript files
+dist → Compiled JavaScript files
+notes → Learning notes
 
-ts
-Copy code
+## First TypeScript File
+
+`src/index.ts` file create karo:
+
+```ts
 let message: string = "Hello TypeScript";
 console.log(message);
-9. Compile TypeScript Code
-bash
-Copy code
+```
+
+## TypeScript Code Compile karna
+
+Terminal me run karo:
+
+```bash
 tsc
-Iske baad:
+```
 
-txt
-Copy code
+Compile hone ke baad ye file banegi:
+
+```txt
 dist/index.js
-file generate ho jaayegi.
+```
 
-10. Run JavaScript File
-bash
-Copy code
+## JavaScript File Run karna
+
+```bash
 node dist/index.js
+```
+
 Output:
 
-txt
-Copy code
+```txt
 Hello TypeScript
-11. VS Code Extensions (Recommended)
-ESLint
+```
 
-Prettier
+## Common Beginner Mistakes
 
-TypeScript Importer
+TypeScript file ko directly browser me chalana
+Compile (`tsc`) karna bhool jaana
+strict mode disable rakhna
 
-Ye extensions:
+## Summary
 
-Code clean rakhenge
-
-Errors highlight karenge
-
-Productivity badhayenge
-
-Common Beginner Mistakes ❌
-.ts file directly browser me chalana
-
-tsc run karna bhool jaana
-
-strict mode off rakhna
-
-Summary
-Node.js install hona chahiye
-
-TypeScript global install karo
-
-tsconfig.json samajhna zaroori hai
-
-TypeScript compile hoke JavaScript banta hai
+Node.js install hona zaroori hai
+TypeScript npm se install hota hai
+TypeScript code compile hoke JavaScript banta hai
+Proper setup se learning aur development easy ho jaata hai
